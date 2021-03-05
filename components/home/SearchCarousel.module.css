@@ -1,0 +1,11 @@
+.Search{
+    position: relative;
+}
+
+.PropertySearch{
+    position: absolute;
+	z-index: 10;
+    top: 40%;
+    width: 80vw;
+    left: 10vw;
+}

@@ -15,7 +15,7 @@ function Footer() {
                         </p>
                     </Col>
                     <Col>
-                        <p className="float-right"><a href="#root">Back to top</a></p>
+                        <p className="float-right"><Link href="#banner" scroll={true}>Back to top</Link></p>
                     </Col>
                 </Row>
             </Container>
