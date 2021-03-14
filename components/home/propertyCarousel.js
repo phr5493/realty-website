@@ -4,27 +4,13 @@ import Carousel from 'react-bootstrap/Carousel';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import SectionBar from './sectionBar';
-import PropertyCard from './propertyCard';
-
-function groupIntoThrees (children) {
-    const output = []
-    let currentGroup = []
-  
-    children.forEach((child, index) => {
-      currentGroup.push(child)
-  
-      if (index % 3 === 2) {
-        output.push(currentGroup)
-        currentGroup = []
-      }
-    })
-  
-    return output
-}
+import PropertyCard from '../propertyCard';
+import Groupings from './logic/groupings';
 
 function PropertyCarousel() {
 
     const [data,setData]= useState([]);
+    const [width, setWidth] = useState(0);
 
     const getData=()=>{
         fetch('Property.json'
@@ -49,24 +35,30 @@ function PropertyCarousel() {
         getData()
     },[])
 
+    const handleResize = () => setWidth(window.innerWidth);
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [handleResize]);
+
     return (
         <Container fluid id="PropertyCarousel" className="bg-primary px-0 pt-0 pb-2 ">
             <SectionBar title="Listings" link="/properties"/>
             <Carousel >
                 {
                     data && data.length>0 &&
-                    groupIntoThrees(data).map((group)=>
+                    Groupings(data).map((group)=>
                         <Carousel.Item key={group[0]._id.toString()} className="m-auto">
                             <Row>
-                                <Col>
-                                    <PropertyCard data={group[0]}/>
-                                </Col>
-                                <Col>
-                                    <PropertyCard data={group[1]}/>
-                                </Col>
-                                <Col>
-                                    <PropertyCard data={group[2]}/>
-                                </Col>
+                                {
+                                    group && group.length>0 &&
+                                    group.map((card)=>
+                                        <Col key={card._id.toString()}>
+                                            <PropertyCard data={card}/>
+                                        </Col>
+                                    )
+                                }
                             </Row>
                         </Carousel.Item>
                     )

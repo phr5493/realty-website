@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Styles from  './SearchCarousel.module.css';
@@ -45,7 +46,7 @@ function PropertySearch() {
                         </Col>
                     </Form.Row>
                 </Form>
-            </Container> 
+            </Container>
         </div>
     )
 }

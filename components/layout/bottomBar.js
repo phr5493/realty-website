@@ -13,7 +13,7 @@ function BottomBar() {
         <Navbar bg="secondary" variant="dark" id="BottomNav">
             <Container className="d-flex justify-content-around">
                 <Row>
-                    <Col xs={6} md="auto">
+                    <Col xs={6} lg={3} xl="auto">
                         <Nav defaultActiveKey="/home" className="flex-column" id="Contact">
                             <h5>Contact</h5>
                             <Form>
@@ -33,7 +33,7 @@ function BottomBar() {
                             </Form>
                         </Nav>
                     </Col>
-                    <Col xs={6} md="auto">
+                    <Col xs={6} lg={3} xl="auto">
                         <Nav className="flex-column ">
                             <h5>Contact Info</h5>
                             <p>Address</p>
@@ -50,7 +50,7 @@ function BottomBar() {
                             <Nav.Link href="#root">Lorem@Ipsum.com</Nav.Link>
                         </Nav>
                     </Col>
-                    <Col xs={6} md="auto">
+                    <Col xs={6} lg={3} xl="auto">
                         <Nav className="flex-column ">
                             <h5>Quicklinks</h5>
                             <Link href="/" passHref>
@@ -67,7 +67,7 @@ function BottomBar() {
                             </Link>
                         </Nav>
                     </Col>
-                    <Col xs={6} md="auto">
+                    <Col xs={6} lg={3} xl="auto">
                         <Nav className="flex-column">
                             <h5>Follow</h5>
                             <Link href="https://facebook.com/" passHref>
@@ -84,25 +84,27 @@ function BottomBar() {
                             </Link>
                         </Nav>
                     </Col>
-                    <Col xs={12} md="auto">
-                        <Nav className="flex-column text-center">
-                            <Link href="/" passHref>
-                                <Navbar.Brand>
-                                    <img
-                                        src="/images/logo.jpg" 
-                                        alt="Navbar Company Logo"
-                                        width="100%"
-                                        height="100%"
-                                        className="d-inline-block align-top"
-                                    />
-                                </Navbar.Brand>
-                            </Link>
-                            <Link href="/" passHref>
-                                <Navbar.Brand>
-                                    John Doe Realty
-                                </Navbar.Brand>
-                            </Link>
-                        </Nav>
+                    <Col lg={12} xl="auto">
+                        <Row className="m-auto justify-content-center">
+                            <Nav className="flex-column text-center">
+                                <Link href="/" passHref>
+                                    <Navbar.Brand>
+                                        <img
+                                            src="/images/logo.jpg" 
+                                            alt="Navbar Company Logo"
+                                            width="100%"
+                                            height="100%"
+                                            className="d-inline-block align-top"
+                                        />
+                                    </Navbar.Brand>
+                                </Link>
+                                <Link href="/" passHref>
+                                    <Navbar.Brand>
+                                        John Doe Realty
+                                    </Navbar.Brand>
+                                </Link>
+                            </Nav>
+                        </Row>
                     </Col>
                 </Row>
             </Container>

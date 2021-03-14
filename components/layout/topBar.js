@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 
 function TopBar() {
     return (
-        <Navbar bg="dark" variant="dark" expand="sm" sticky="top" id="TopNav">
+        <Navbar bg="dark" variant="dark" expand="md" sticky="top" id="TopNav">
             <Link href="/" passHref>
                 <Navbar.Brand>
                 <img

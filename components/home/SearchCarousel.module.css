@@ -4,8 +4,14 @@
 
 .PropertySearch{
     position: absolute;
+    top: 20%;
 	z-index: 10;
-    top: 40%;
     width: 80vw;
     left: 10vw;
+}
+
+@media (min-width: 576px) { 
+    .PropertySearch{
+        top: 40%;
+    }
 }
