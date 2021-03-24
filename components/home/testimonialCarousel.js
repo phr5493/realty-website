@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import SectionBar from './sectionBar';
-import Testimonial from './testimonial';
+import Testimonial from '../testimonial';
 import Styles from  './TestimonalCarousel.module.css';
 
 function TestimonalCarousel() {

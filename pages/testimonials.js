@@ -1,5 +1,6 @@
 import Layout, { siteTitle } from '../components/layout'
 import Head from 'next/head'
+import TestimonialContainer from '../components/testimonial/testimonialContainer';
 
 export default function Testimonials() {
   return (
@@ -7,7 +8,9 @@ export default function Testimonials() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <h1>Testimonials</h1>
+      <div id="Testimonials">
+        <TestimonialContainer />
+      </div>
     </Layout>
   )
 }

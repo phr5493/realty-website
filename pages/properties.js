@@ -1,5 +1,6 @@
-import Layout, { siteTitle } from '../components/layout'
-import Head from 'next/head'
+import Layout, { siteTitle } from '../components/layout';
+import Head from 'next/head';
+import PropertyContainer from '../components/property/propertyContainer';
 
 export default function Properties() {
   return (
@@ -7,7 +8,9 @@ export default function Properties() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <h1>Properties</h1>
+      <div id="Properties">
+        <PropertyContainer />
+      </div>
     </Layout>
   )
 }

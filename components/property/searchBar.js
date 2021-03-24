@@ -3,24 +3,36 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown';
 import Styles from  './SearchCarousel.module.css';
 
-function PropertySearch() {
+function SearchBar() {
     return (
         <div className={Styles.PropertySearch}>
-            <Container fluid className="pt-3 bg-secondary border rounded-pill">
+            <Container fluid className="pt-3 bg-secondary">
                 <Form>
                     <Form.Row>
-                        <Form.Group as={Col} xs={2} controlId="formGridEmail">
+                        <Form.Group as={Col} xs={8} controlId="formGridEmail">
                             <Form.Control type="text" placeholder="Zip code" />
                         </Form.Group>
-                        <Form.Group as={Col} xs={2} controlId="formGridMinPrice">
-                            <Form.Control type="text" placeholder="Minimum Price" />
+                        <Form.Group as={Col} xs={1} controlId="formGridPrice">
+                            <DropdownButton xs={1} variant="light" id="priceDropdown" title="Price">
+                                <div className={Styles.PriceDropItem}>
+                                    <Container fluid className="pb-0">
+                                        <Form.Row>
+                                            <Form.Group as={Col} controlId="formGridMinPrice">
+                                                <Form.Control type="text" placeholder="Minmum Price" />
+                                            </Form.Group>
+                                            <Form.Group as={Col} controlId="formGridMaxPrice">
+                                                <Form.Control type="text" placeholder="Maximum Price" />
+                                            </Form.Group>
+                                        </Form.Row>
+                                    </ Container>
+                                </div>
+                            </DropdownButton>
                         </Form.Group>
-                        <Form.Group as={Col} xs={2} controlId="formGridMaxPrice">
-                            <Form.Control type="text" placeholder="Maximum Price" />
-                        </Form.Group>
-                        <Form.Group as={Col} xs={2} controlId="formGridBeds">
+                        <Form.Group as={Col} xs={1} controlId="formGridBeds">
                             <Form.Control as="select">
                                 <option>Beds</option>
                                 <option>1+</option>
@@ -30,7 +42,7 @@ function PropertySearch() {
                                 <option>5+</option>
                             </Form.Control>
                         </Form.Group>
-                        <Form.Group as={Col} xs={2} controlId="formGridBaths">
+                        <Form.Group as={Col} xs={1} controlId="formGridBaths">
                             <Form.Control as="select">
                                 <option>Baths</option>
                                 <option>1+</option>
@@ -40,7 +52,7 @@ function PropertySearch() {
                                 <option>5+</option>
                             </Form.Control>
                         </Form.Group>
-                        <Col xs={2}>
+                        <Col xs={1}>
                             <Button variant="primary" as="input" type="submit" value="Search" block/>{' '}
                         </Col>
                     </Form.Row>
@@ -50,4 +62,4 @@ function PropertySearch() {
     )
 }
 
-export default PropertySearch;
+export default SearchBar;

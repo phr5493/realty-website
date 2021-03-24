@@ -1,0 +1,14 @@
+.PropertySearch{
+    position: sticky;
+    top: 10%;
+	z-index: 10;
+    width: 100%;
+}
+
+.PriceDropDown{
+    width: 100%;
+}
+
+.PriceDropItem{
+    width: 30vw;
+}
