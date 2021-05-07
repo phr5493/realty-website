@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import React from 'react'
+import Button from 'react-bootstrap/Button';
 
 function ShortAbout() {
     return (
@@ -16,6 +18,7 @@ function ShortAbout() {
                 Sea tota graeci suscipiantur ea, duis saperet perpetua ei pri. 
                 Nec ut tation salutandi incorrupte, vidisse persius id vix, ferri iuvaret expetenda id nam.
             </p>
+            <Link href="/about" passHref><Button variant="primary" size="lg">Read more</Button></Link>
         </div>
     )
 }

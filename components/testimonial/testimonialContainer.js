@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Parallax } from 'react-parallax';
 import Testimonial from '../testimonial';
 
 function TestimonialContainer() {
@@ -32,12 +33,14 @@ function TestimonialContainer() {
     },[])
 
     return (
-        <Container fluid id="TestimonialContainer" className="bg-primary px-0 py-3">
+        <Container fluid id="TestimonialContainer" className="bg-primary px-0 pb-3">
             <Row className="justify-content-center">
-                <Container>
-                    <Col className="my-5 text-center">
-                        <h1>Testimonals</h1>
-                    </Col>
+                <Container fluid className="px-0">
+                    <Parallax bgImage="/images/lake_eola.jpg" bgImageAlt="the cat" strength={200}>
+                        <Col className="my-5 text-center">
+                            <h1>Testimonals</h1>
+                        </Col>
+                    </Parallax>
                 </Container>
             </Row>
             {
@@ -45,9 +48,7 @@ function TestimonialContainer() {
                 data.map(
                     (item)=>
                     <Container className="bg-primary px-0 py-3">
-                        <Container className="bg-secondary px-0 py-3">
-                            <Testimonial data={item}/>
-                        </Container>
+                        <Testimonial data={item}/>
                     </Container>
                 )
             }

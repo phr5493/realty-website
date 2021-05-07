@@ -1,5 +1,6 @@
 import Layout, { siteTitle } from '../components/layout'
 import Head from 'next/head'
+import AboutContainer from '../components/about/aboutContainer';
 
 export default function About() {
   return (
@@ -7,7 +8,9 @@ export default function About() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <h1>About</h1>
+      <div id="About">
+        <AboutContainer />
+      </div>
     </Layout>
   )
 }

@@ -36,5 +36,9 @@ yarn-error.log*
 
 # Firebase files
 firebase.json
+firestore.indexes.json
+firestore.rules
 .firebaserc
 .firebase/
+populatedb.js
+realty-website-10dd2-95d16761c29d.json

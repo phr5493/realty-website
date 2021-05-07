@@ -37,7 +37,6 @@ function PropertyContainer() {
             <SearchBar />
             <Container fluid id="PropertyCards" className="bg-primary px-5 pt-5 pb-0 ">
                 <Row>
-                
                     {
                         data && data.length>0 &&
                         data.map(
