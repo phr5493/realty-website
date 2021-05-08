@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import SearchBar from './searchBar';
+import SearchCarousel from '../home/searchCarousel';
 import PropertyCard from '../propertyCard';
 
 function PropertyContainer() {
@@ -34,7 +34,7 @@ function PropertyContainer() {
 
     return (
         <Container fluid id="PropertyContainer" className="p-0">
-            <SearchBar />
+            <SearchCarousel />
             <Container fluid id="PropertyCards" className="bg-primary px-5 pt-5 pb-0 ">
                 <Row>
                     {
